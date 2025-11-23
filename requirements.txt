@@ -1,146 +1,37 @@
-﻿acres
-aiofiles
-aiohappyeyeballs
-aiohttp
-aiosignal
-annotated-types
-anyio
-attrs
-blinker
-brotli
-cachetools
-certifi
-charset-normalizer
-ci-info
-click
-colorama
-configobj
-configparser
-dataclasses-json
-ddgs
-duckduckgo_search
-etelemetry
-faiss-cpu
-fake-useragent
-filelock
-filetype
-fitz
-Flask
-frontend
-frozenlist
-fsspec
-google-ai-generativelanguage
-google-api-core
-google-api-python-client
-google-auth
-google-auth-httplib2
-google-generativeai
-googleapis-common-protos
-greenlet
-grpcio
-grpcio-status
-h11
-h2
-hpack
-httpcore
-httplib2
-httpx
-httpx-sse
-huggingface-hub
-hyperframe
-idna
-importlib_resources
-itsdangerous
-Jinja2
-joblib
-jsonpatch
-jsonpointer
-langchain
-langchain-classic
-langchain-community
-langchain-core
-langchain-experimental
-langchain-google-genai
-langchain-text-splitters
-langgraph
-langgraph-checkpoint
-langgraph-prebuilt
-langgraph-sdk
-langsmith
-looseversion
-lxml
-MarkupSafe
-marshmallow
-mpmath
-multidict
-mypy_extensions
-networkx
-nibabel
-nipype
-numpy
-orjson
-ormsgpack
-packaging
-pandas
-pathlib
-pillow
-pip
-primp
-propcache
-proto-plus
-protobuf
-prov
-puremagic
-pyasn1
-pyasn1_modules
-pydantic
-pydantic_core
-pydantic-settings
-pydot
-PyMuPDF
-pyparsing
-pytesseract
-python-dateutil
-python-docx
-python-dotenv
-pytz
-pyxnat
-PyYAML
-rdflib
-regex
-requests
-requests-toolbelt
-rsa
-safetensors
-scikit-learn
-scipy
-setuptools
-simplejson
-six
-sniffio
-socksio
-SQLAlchemy
-starlette
-sympy
-tenacity
-threadpoolctl
-tokenizers
-torch
-torchaudio
-torchvision
-tqdm
-traits
-transformers
-typing_extensions
-typing-inspect
-typing-inspection
-tzdata
-uritemplate
-urllib3
-uvicorn
-Werkzeug
-xxhash
-yarl
-zstandard
+# Core LLM and AI frameworks
+langchain>=0.1.0
+langchain-google-genai>=1.0.0
+langchain-community>=0.0.20
+langchain-core>=0.1.0
 
+# Document processing
+PyMuPDF>=1.23.0  # PDF processing (fitz)
+python-docx>=1.0.0  # Word documents
+openpyxl>=3.1.0  # Excel files
+pandas>=2.0.0  # Data manipulation
 
+# Image processing
+Pillow>=10.0.0  # Image handling
+pytesseract>=0.3.10  # OCR (optional)
+
+# ML and embeddings
+transformers>=4.35.0  # CLIP model
+torch>=2.0.0  # PyTorch for CLIP
+scikit-learn>=1.3.0  # Cosine similarity
+
+# Vector store
+faiss-cpu>=1.7.4  # FAISS for vector indexing
+
+# Search
+duckduckgo-search>=4.0.0  # Web search
+
+# Utilities
+python-dotenv>=1.0.0  # Environment variables
+numpy>=1.24.0  # Numerical operations
+
+# Web Framework
+Flask>=3.0.0  # Web application framework
+Werkzeug>=3.0.0  # WSGI utility library
+
+# Optional (for better performance)
+# faiss-gpu>=1.7.4  # GPU-accelerated FAISS (if you have GPU)
