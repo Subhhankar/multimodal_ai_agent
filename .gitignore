@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Flask
+instance/
+.webassets-cache
+*.db
+*.sqlite
+
+# Uploads and temporary files
+uploads/
+*.log
+
+# Model caches
+.cache/
+models/
+*.pth
+*.ckpt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Project specific
+test_document.txt
+test_file.txt
+*.pdf
+*.docx
+*.xlsx
+*.csv
+# But keep example files in docs/
+!docs/*.pdf
+!docs/*.docx
+
+# FAISS index files
+faiss_index.bin
+metadata.pkl
