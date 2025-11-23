@@ -35,3 +35,6 @@ Werkzeug>=3.0.0  # WSGI utility library
 
 # Optional (for better performance)
 # faiss-gpu>=1.7.4  # GPU-accelerated FAISS (if you have GPU)
+
+gunicorn>=21.0.0
+
