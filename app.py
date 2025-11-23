@@ -401,6 +401,9 @@ def server_error(e):
 
 
 if __name__ == '__main__':
+    # Get port from environment variable (for Render/Heroku)
+    port = int(os.environ.get('PORT', 5000))
+    
     # Run the app
     print("=" * 80)
     print("🚀 Starting Multi-Agent Flask Web Application")
@@ -408,8 +411,16 @@ if __name__ == '__main__':
     print(f"📁 Upload folder: {app.config['UPLOAD_FOLDER']}")
     print(f"📦 Max file size: {app.config['MAX_CONTENT_LENGTH'] // (1024*1024)}MB")
     print(f"📝 Allowed extensions: {', '.join(ALLOWED_EXTENSIONS)}")
-    print("=" * 80)
-    print("🌐 Open your browser and go to: http://localhost:5000")
+    print(f"🌐 Port: {port}")
     print("=" * 80)
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Check if running in production
+    if os.environ.get('RENDER') or os.environ.get('DYNO'):
+        print("🚀 Running in PRODUCTION mode")
+        # Don't use debug mode in production
+        app.run(host='0.0.0.0', port=port, debug=False)
+    else:
+        print("🌐 Running in DEVELOPMENT mode")
+        print("🌐 Open your browser and go to: http://localhost:5000")
+        print("=" * 80)
+        app.run(debug=True, host='0.0.0.0', port=port)
